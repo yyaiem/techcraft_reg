@@ -3,14 +3,15 @@ while (true) {
     let transection_number = prompt("Enter Your Transection ID:")
     if (transection_number.length > 7) {
         document.getElementById("transection_id").value = transection_number;
-        document.getElementById("transection_id").placeholder = transection_number;
         break loop;
     } else {
         alert("Please enter a valid Transection ID");
     }
 }
 
-
+var currentDate = new Date();
+var formattedDate = currentDate.toLocaleString();
+document.getElementById("date_time").value = formattedDate;
 
 
 function showInputs() {
