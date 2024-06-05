@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./site_files/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="site_body">
+
+        <header>
+            <nav>
+                <ul class="nav_items">
+                    <a class="home_logo" href="https://yyaiem.github.io/yy/">
+                        <img class="home_logo" src="./site_files/transparent YY logo.png" height="40px"
+                            alt="YantraYodha">
+                    </a>
+                    <li class="nav_text"> <a href="https://yyaiem.github.io/yy/" target="_blank"
+                            class="navbar_text">YantraYodha</a> </li>
+
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="site_head  ">
+
+                <div class="intro">
+                    <h1 class="home_head_text">
+                        Registration Form
+                    </h1>
+
+                </div>
+            </div>
+
+            <div class="site_head">
+                <form action="" method="post" id="membership_form">
+
+                    <!-- group lead details -->
+                    <div class="qst_grp">
+                        <p class="qst_catagory">Personal Information of Team Lead</p>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="lead_name">Full Name</label>
+                            <div class="input_ans">
+                                <input type="text" name="lead_name" id="lead_name" class="ansfield"
+                                    placeholder="Your Full Name" required>
+                            </div>
+                        </div>
+
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="lead_gender">Gender</label>
+                            <div class="input_ans">
+                                <select class="ansfield" name="lead_gender" id="lead_gender" required>
+                                    <option disabled selected value>Select Gender</option>
+                                    <option value="F">Female</option>
+                                    <option value="LGBT">LGBTQ</option>
+                                    <option value="M">Male</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="lead_number">Contact Number (Without Country code)</label>
+                            <div class="input_ans">
+                                <input class="ansfield" type="number"   name="lead_number" id="lead_number"
+                                    min="1000000000" placeholder="Your mobile number" required>
+                            </div>
+                        </div>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="lead_mail">E-Mail </label>
+                            <div class="input_ans">
+                                <input class="ansfield" type="email" name="lead_mail" id="lead_mail"
+                                    placeholder="Your E-mail" required>
+                            </div>
+                        </div>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="lead_addrs">Residential Address</label>
+                            <div class="input_ans">
+                                <input class="ansfield" type="text" name="lead_addrs" id="lead_addrs"
+                                    placeholder="Enter Your Full address" required>
+                            </div>
+                        </div>
+
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="lead_pin_code">Pin Code</label>
+                            <div class="input_ans">
+                                <input class="ansfield" type="number" name="lead_pin_code" id="lead_pin_code"
+                                    placeholder="Enter your Postal Index Number code" required>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Team info -->
+
+
+                    <div class="qst_grp">
+                        <p class="qst_catagory">Team Information</p>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="team_name">Team Name</label>
+                            <div class="input_ans">
+                                <input class="ansfield" type="text" name="team_name" id="team_name"
+                                    placeholder="Enter Your Team Name" required>
+                            </div>
+                        </div>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="grp_mem">Numbers of Team members (except team leader)</label>
+                            <div class="input_ans">
+                                <select class="ansfield" name="grp_mem" id="grp_mem" onchange="showInputs()" required>
+                                    <option disabled selected value>Count of group members</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="qst_set">
+                            <div class="input_ans">
+                                <div id="memberInputs"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- institute details -->
+
+                    <div class="qst_grp">
+                        <p class="qst_catagory">School / College / Institution Information</p>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="institute_name">School / College / Institution Name</label>
+                            <div class="input_ans">
+                                <input type="text" name="institute_name" id="institute_name" class="ansfield"
+                                    placeholder="Enter the official name of your Institution">
+                            </div>
+                        </div>
+                        <div class="qst_set">
+                            <label class="qst_labl" for="institute_addr">Institution Address</label>
+                            <div class="input_ans">
+                                <input type="text" name="institute_addr" id="institute_addr" class="ansfield"
+                                    placeholder="Enter the official name of your Institution">
+                            </div>
+                        </div>
+                        <div class="qst_set">
+                            <label class="qst_labl" for="institute_pin">Institution Pin / Zip code</label>
+                            <div class="input_ans">
+                                <input type="number" name="institute_pin" id="institute_pin" class="ansfield"
+                                    placeholder="Enter Institution Postal Index Number code">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Project details -->
+
+                    <div class="qst_grp">
+                        <p class="qst_catagory">Project Information</p>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="proj_titl">Project Title</label>
+                            <div class="input_ans">
+                                <input type="text" name="proj_titl" id="proj_titl" class="ansfield"
+                                    placeholder="Enter Project Title">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Project details -->
+
+                    <div class="qst_grp">
+                        <p class="qst_catagory">Declaration</p>
+                        <p class="qst_description">By registering for the YantraYodha Online Electronics
+                            Project Competition, I solemnly affirm my commitment to presenting my project at the
+                            designated time. I fully understand and respect that all materials and data associated
+                            with the competition are the exclusive intellectual property of YantraYodha and its
+                            organizers. I pledge to maintain confidentiality regarding any competition-related
+                            information, refraining from sharing it with any unauthorized parties. I am aware that
+                            failure to adhere to these terms may result in disqualification from the competition and
+                            potential further repercussions as determined by the organizers.</p>
+
+                        <div class="qst_set">
+                            <div class="input_ans">
+                                <input type="checkbox" name="Concernment" id="Concernment" value="I Agree" required>
+                                <label class="qst_labl" for="Concernment">I Agree</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- transection details -->
+
+                    <div class="qst_grp  reg_fees_details">
+                        <p class="qst_catagory">Registration fee</p>
+
+                        <div class="qst_set">
+                            <label class="qst_labl" for="transection_id">Transection ID</label>
+                            <div class="input_ans">
+                                <input type="text" name="transection_id" id="transection_id" class="reg_fees_details">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- submit button  -->
+                    <div class="qst_grp">
+                        <div class="submit_btn_sec">
+                            <button type="submit" class="submit_button" id="" name="status_box"> Submit</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </main>
+        <footer>
+            <div class="copy_text">
+                <p class="copyright foot_txt footer_items">&COPY; 2024 Pinaka</p>
+                <p class="copyright foot_txt footer_items">v 1.2</p>
+                <a href="https://yyaiem.github.io/privacy-Pollicy" target="_blank" rel="noopener noreferrer">
+                    <p class="copyright foot_txt footer_items">Privacy Policy</p>
+                </a>
+                <p class="powerd_by foot_txt footer_items">Powerd by GitHub
+                </p>
+
+                <img class="github_icon foot_txt" src="./site_files/github.png" alt="GitHub Logo" height="20px">
+            </div>
+        </footer>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
