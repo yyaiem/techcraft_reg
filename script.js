@@ -83,7 +83,7 @@ function showInputs() {
 }
 
 
-let url = 'https://script.google.com/macros/s/AKfycby9SOCzB2dsMUd6HJAZV9kXwkmlDBbebcazU544U3aLnbOKrDSrL48nZVN4AeLw-X3g/exec'
+let url = 'https://script.google.com/macros/s/AKfycbyNRnWW93AfchUy_8nnJmyFYWipSx4kyZb_BqLpNL80KSF0gcnq4qqhun3gNCbAbNNd/exec'
 let form = document.querySelector('#membership_form')
 form.addEventListener("submit", (e) => {
     e.target.status_box.innerHTML = "Submitting..";
