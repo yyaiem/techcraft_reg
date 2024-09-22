@@ -1,13 +1,62 @@
-loop:
-while (true) {
-    let transection_number = prompt("Enter Your Transection ID:")
-    if (transection_number.length > 7) {
-        document.getElementById("transection_id").value = transection_number;
-        break loop;
-    } else {
-        alert("Please enter a valid Transection ID");
+// loop:
+// while (true) {
+//     let transection_number = prompt("Enter Your Transection ID:")
+//     if (transection_number.length > 7) {
+//         document.getElementById("transection_id").value = transection_number;
+//         break loop;
+//     } else {
+//         alert("Please enter a valid Transection ID");
+//         continue;
+//     }
+// }
+
+
+function isValidNumber(input) {
+    const regex = /^\d{7,14}$/;
+    return regex.test(input);
+}
+
+function promptForNumber() {
+    document.getElementById('membership_form').style.display = 'none';
+    document.getElementById('Err_msg').innerHTML = "Something Wrong !! Reload the form, Enter a valid Transection ID in Popup Input Window.."
+    document.getElementById('Err_msg').style.display = 'flex';
+    let userInput;
+
+    while (true) {
+        userInput = prompt("Please enter Your UPI Transection ID:");
+
+        // Handle the case when the user presses cancel
+        if (userInput === null) {
+            continue;
+        }
+
+        // Trim the input to remove whitespace
+        userInput = userInput.trim();
+
+        // Check for blank input
+        if (userInput === "") {
+            continue;
+        }
+
+        // Validate the number
+        if (!isValidNumber(userInput)) {
+            alert("Invalid input! Please enter a Valid Upi Transection ID!!");
+        } else {
+            document.getElementById('Err_msg').style.display = 'none';
+            document.getElementById('membership_form').style.display = 'block';
+            document.getElementById("transection_id").value = transection_number;
+            break; // Exit the loop
+        }
     }
 }
+
+// Run the function on page load
+window.onload = promptForNumber;
+
+
+
+
+
 
 var currentDate = new Date();
 var formattedDate = currentDate.toLocaleString();
