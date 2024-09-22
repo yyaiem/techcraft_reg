@@ -7,6 +7,11 @@
     <title>Registration Form </title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./site_files/favicon.ico" type="image/x-icon">
+    <style>
+        .membership_form{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,14 +37,15 @@
 
                 <div class="intro">
                     <h1 class="home_head_text">
-                        Registration Form
+                        TechCraft Registration Form
                     </h1>
 
                 </div>
             </div>
 
             <div class="site_head">
-                <form action="" method="post" id="membership_form">
+                <div class="err_msg" id="Err_msg"></div>
+                <form action="" method="post" id="membership_form" class="membership_form">
 
                     <!-- group lead details -->
                     <div class="qst_grp">
@@ -84,7 +90,7 @@
                         </div>
 
                         <div class="qst_set">
-                            <label class="qst_labl" for="lead_addrs">Residential Address</label>
+                            <label class="qst_labl" for="lead_addrs">Permanent Address</label>
                             <div class="input_ans">
                                 <input class="ansfield" type="text" name="lead_addrs" id="lead_addrs"
                                     placeholder="Enter Your Full address" required>
@@ -93,7 +99,7 @@
 
 
                         <div class="qst_set">
-                            <label class="qst_labl" for="lead_pin_code">Pin Code</label>
+                            <label class="qst_labl" for="lead_pin_code">Pin / Zip Code</label>
                             <div class="input_ans">
                                 <input class="ansfield" type="number" name="lead_pin_code" id="lead_pin_code"
                                     placeholder="Enter your Postal Index Number code" required>
@@ -252,7 +258,7 @@
         <footer>
             <div class="copy_text">
                 <p class="copyright foot_txt footer_items">&COPY; 2024 Pinaka</p>
-                <p class="copyright foot_txt footer_items">v 1.2</p>
+                <p class="copyright foot_txt footer_items">Beta Version</p>
                 <a href="https://yyaiem.github.io/privacy-Pollicy" target="_blank" rel="noopener noreferrer">
                     <p class="copyright foot_txt footer_items">Privacy Policy</p>
                 </a>
