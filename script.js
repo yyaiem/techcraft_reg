@@ -23,23 +23,23 @@ function promptForNumber() {
     let userInput;
 
     while (true) {
-        userInput = prompt("Please enter Your UPI Transection ID:");
+        transection_number = prompt("Please enter Your UPI Transection ID:");
 
         // Handle the case when the user presses cancel
-        if (userInput === null) {
+        if (transection_number === null) {
             continue;
         }
 
         // Trim the input to remove whitespace
-        userInput = userInput.trim();
+        transection_number = transection_number.trim();
 
         // Check for blank input
-        if (userInput === "") {
+        if (transection_number === "") {
             continue;
         }
 
         // Validate the number
-        if (!isValidNumber(userInput)) {
+        if (!isValidNumber(transection_number)) {
             alert("Invalid input! Please enter a Valid Upi Transection ID!!");
         } else {
             document.getElementById('Err_msg').style.display = 'none';
