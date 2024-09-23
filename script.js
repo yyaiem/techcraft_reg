@@ -20,7 +20,7 @@ function promptForNumber() {
     document.getElementById('membership_form').style.display = 'none';
     document.getElementById('Err_msg').innerHTML = "Something Wrong !! Reload the form, Enter a valid Transection ID in Popup Input Window.."
     document.getElementById('Err_msg').style.display = 'flex';
-    let userInput;
+    let transection_number;
 
     while (true) {
         transection_number = prompt("Please enter Your UPI Transection ID:");
