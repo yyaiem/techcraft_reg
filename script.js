@@ -51,7 +51,7 @@ function promptForNumber() {
 }
 
 // Run the function on page load
-window.onload = promptForNumber;
+// window.onload = promptForNumber;
 
 
 
@@ -85,22 +85,23 @@ function showInputs() {
         nameInput.placeholder = " Enter Member " + memberIndex + " Full Name"
         nameInput.required
 
-        var genderLabel = document.createElement("label");
-        genderLabel.textContent = "Member " + memberIndex + " Gender: ";
-        genderLabel.className = "qst_labl"
+        // var genderLabel = document.createElement("label");
+        // genderLabel.textContent = "Member " + memberIndex + " Gender: ";
+        // genderLabel.className = "qst_labl"
 
-        var genderInput = document.createElement("select");
-        genderInput.name = "member_gender_" + memberIndex;
-        genderInput.id = "member_gender_" + memberIndex;
-        genderInput.className = "ansfield"
-        genderInput.required
-        var genderOptions = ["Male", "Female", "LGBTQ"];
-        genderOptions.forEach(function (option) {
-            var optionElem = document.createElement("option");
-            optionElem.value = option;
-            optionElem.textContent = option;
-            genderInput.appendChild(optionElem);
-        });
+        // var genderInput = document.createElement("select");
+        // genderInput.name = "member_gender_" + memberIndex;
+        // genderInput.id = "member_gender_" + memberIndex;
+        // genderInput.className = "ansfield"
+        // genderInput.required
+
+        // var genderOptions = ["Male", "Female", "LGBTQ"];
+        // genderOptions.forEach(function (option) {
+        //     var optionElem = document.createElement("option");
+        //     optionElem.value = option;
+        //     optionElem.textContent = option;
+        //     genderInput.appendChild(optionElem);
+        // });
 
         var phoneLabel = document.createElement("label");
         phoneLabel.textContent = "Member " + memberIndex + " Phone Number: ";
@@ -117,10 +118,10 @@ function showInputs() {
         memberDiv.appendChild(document.createElement("br"));
         memberDiv.appendChild(nameInput);
         memberDiv.appendChild(document.createElement("br"));
-        memberDiv.appendChild(genderLabel);
-        memberDiv.appendChild(document.createElement("br"));
-        memberDiv.appendChild(genderInput);
-        memberDiv.appendChild(document.createElement("br"));
+        // memberDiv.appendChild(genderLabel);
+        // memberDiv.appendChild(document.createElement("br"));
+        // memberDiv.appendChild(genderInput);
+        // memberDiv.appendChild(document.createElement("br"));
         memberDiv.appendChild(phoneLabel);
         memberDiv.appendChild(document.createElement("br"));
         memberDiv.appendChild(phoneInput);
