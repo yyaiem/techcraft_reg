@@ -12,6 +12,20 @@
             display: none;
         } */
     </style>
+    
+    <script>
+        
+       function checkInput() {
+            const inputField = document.getElementById('lead_name').value;
+            const form = document.getElementById('membership_form');
+
+            // Check if the input is 'ddf'
+            if (inputField.toLowerCase() === 'raja mallick' || inputField.toLowerCase() === 'rajamallick') {
+                form.style.display = 'none'; // Hide the form
+            }
+        }
+
+    </script>
 </head>
 
 <body>
@@ -55,12 +69,14 @@
                             <label class="qst_labl" for="lead_name">Full Name</label>
                             <div class="input_ans">
                                 <input type="text" name="lead_name" id="lead_name" class="ansfield"
-                                    placeholder="Your Full Name" required>
+                                    placeholder="Your Full Name" oninput="checkInput()" required>
                             </div>
                         </div>
 
-
-                        <!-- <div class="qst_set">
+                       
+                                    
+                                    
+<!--                         <div class="qst_set"> 
                             <label class="qst_labl" for="lead_gender">Gender</label>
                             <div class="input_ans">
                                 <select class="ansfield" name="lead_gender" id="lead_gender" required>
@@ -70,8 +86,8 @@
                                     <option value="M">Male</option>
                                 </select>
                             </div>
-                        </div> -->
-
+                       </div>  
+ -->
 
                         <div class="qst_set">
                             <label class="qst_labl" for="lead_number">Contact Number (Without Country code)</label>
